@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=IBM+Plex+Sans:wght@400;500&display=swap');
+:root{--preto:#000;--painel:#0e1410;--borda:#1c2b21;--verde:#1ee67a;--verde-escuro:#0f9d58;--texto:#e8f3ec;--suave:#9db0a4}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'IBM Plex Sans','Segoe UI',Arial,sans-serif;background:var(--preto);color:var(--texto);line-height:1.65}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3,.logo,.botao,button{font-family:'Chakra Petch','Segoe UI',Arial,sans-serif}
+h1{font-size:clamp(2.1rem,5.5vw,3.4rem);line-height:1.1}
+h2{font-size:clamp(1.5rem,3.5vw,2rem);margin-bottom:1.5rem}
+h2::after{content:"";display:block;width:48px;height:3px;margin-top:.6rem;background:var(--verde)}
+h3{font-size:1.2rem;margin-bottom:.4rem}
+p{color:var(--suave);max-width:65ch}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--verde);outline-offset:3px}
+.topo{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;background:var(--preto);border-bottom:1px solid var(--borda)}
+.logo{font-size:1.6rem;font-weight:700;text-decoration:none}
+.logo span{color:var(--verde)}
+nav ul{display:flex;gap:.25rem;list-style:none}
+nav a{display:block;padding:.5rem 1rem;border-radius:4px;text-decoration:none;color:var(--suave)}
+nav a:hover{color:var(--verde)}
+nav a[aria-current="page"]{color:var(--preto);background:var(--verde)}
+.menu-check,.menu-btn{display:none}
+main{max-width:1100px;margin:0 auto;padding:0 5%}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;padding:4.5rem 0}
+.hero p{margin:1.25rem 0 2rem;font-size:1.1rem}
+.botao,button{display:inline-block;padding:.85rem 1.7rem;border:0;border-radius:4px;background:var(--verde);color:var(--preto);font-size:1rem;font-weight:700;text-decoration:none;cursor:pointer}
+.botao:hover,button:hover{background:var(--texto)}
+.faixa,.bloco{padding:2.5rem 0}
+.titulo-pagina{padding:4rem 0 1rem}
+.titulo-pagina p{margin-top:1rem;font-size:1.1rem}
+.grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.25rem;list-style:none}
+.card{background:var(--painel);border:1px solid var(--borda);border-radius:6px;padding:1.5rem}
+.pessoa{text-align:center}
+.pessoa p{margin:0 auto}
+.avatar{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 1rem;border-radius:50%;background:var(--verde);color:var(--preto);font:700 1.2rem 'Chakra Petch',sans-serif}
+.produto{padding:0;overflow:hidden}
+.produto:hover{border-color:var(--verde)}
+.produto .info{padding:1.25rem 1.5rem 1.5rem}
+.preco{color:var(--verde);font:700 1.5rem 'Chakra Petch',sans-serif;margin:.5rem 0 1rem}
+form{max-width:560px;display:grid;gap:1.25rem;padding-bottom:2rem}
+label{display:block;font-weight:500}
+input,textarea{width:100%;margin-top:.4rem;padding:.8rem 1rem;border:1px solid var(--borda);border-radius:4px;background:var(--painel);color:var(--texto);font:inherit}
+input:focus,textarea:focus{border-color:var(--verde)}
+footer{margin-top:3rem;padding:1.5rem 5%;border-top:1px solid var(--borda);text-align:center;font-size:.9rem;color:var(--suave)}
+footer p{margin:0 auto}
+@media(max-width:720px){
+.hero{grid-template-columns:1fr;gap:2rem;padding:2.5rem 0}
+.hero img{order:-1;max-width:240px;margin:0 auto}
+.menu-btn{display:block;font-size:1.7rem;line-height:1;color:var(--verde);cursor:pointer;padding:.3rem .6rem}
+nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--preto);border-bottom:1px solid var(--borda);padding:.5rem 5% 1rem}
+.menu-check:checked ~ nav{display:block}
+nav ul{flex-direction:column}
+}
